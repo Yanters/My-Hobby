@@ -55,7 +55,6 @@ const About: React.FC<{
                     duration={500}
                     spy={true}
                     offset={-80}
-                    target="_blank"
                   >
                     {props.buttonLabel}
                   </Button>

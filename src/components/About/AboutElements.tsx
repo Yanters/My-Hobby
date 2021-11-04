@@ -4,11 +4,11 @@ export const AboutContainer = styled.div<{ isLight: boolean }>`
   color: #fff;
   background: ${({ isLight }) => (isLight ? "#f9f9f9" : "#010606")};
   height: 100vh;
-  width: 98.5vw;
+  display: flex;
 
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     padding: 100px 0;
-  }
+  } */
 `;
 
 export const AboutWrapper = styled.div`
@@ -16,11 +16,12 @@ export const AboutWrapper = styled.div`
   flex-direction: column;
   z-index: 1;
   height: 100%;
-  width: 90%;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
   padding: 0 20px;
   justify-content: center;
+  flex-shrink: 1;
 `;
 
 export const AboutRow = styled.div<{ imgStart: any }>`
@@ -28,24 +29,18 @@ export const AboutRow = styled.div<{ imgStart: any }>`
   width: 100%;
   height: 100%;
   flex-direction: row;
-  flex-wrap: ${({ imgStart }) => (imgStart ? "wrap" : `wrap-reverse`)};
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
+  flex-shrink: 1;
 
-  /* display: grid;
-  grid-auto-columns: minmax(auto, 1fr);
-  align-items: center;
-  grid-template-areas: ${({ imgStart }) =>
-    imgStart ? `'col2 col1'` : `'col1 col2'`}; */
-
-  /* @media screen and (max-width: 768px) {
-    grid-template-areas: ${({ imgStart }) =>
-    imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`};
-  } */
+  @media screen and (max-width: 768px) {
+    flex-wrap: ${({ imgStart }) => (imgStart ? "wrap" : `wrap-reverse`)};
+  }
 `;
 
 export const Column1 = styled.div`
+  display: flex;
   margin-bottom: 15px;
   padding: 0 15px;
   flex-shrink: 1;
@@ -54,6 +49,7 @@ export const Column1 = styled.div`
 `;
 
 export const Column2 = styled.div`
+  display: flex;
   margin-bottom: 15px;
   padding: 0 15px;
   flex-shrink: 1;
@@ -83,8 +79,8 @@ export const Heading = styled.h1<{ lightText: boolean }>`
   font-weight: 600;
   color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#010606")};
 
-  @media screen and(max-width:480px) {
-    font-size: 32px;
+  @media screen and (max-width: 768px) {
+    font-size: 24px;
   }
 `;
 
@@ -104,11 +100,23 @@ export const BtnWrap = styled.div`
 export const ImgWrap = styled.div`
   /* max-width: 555px; */
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;
 
 export const Img = styled.img`
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
+  /* width: 100%; */
+  /* height: 100%; */
   margin: 0 0 10px 0;
   padding-right: 0;
+
+  @media screen and (max-width: 768px) {
+    max-width: 50%;
+  }
+
+  @media screen and (max-width: 480px) {
+    max-width: 40%;
+  }
 `;
