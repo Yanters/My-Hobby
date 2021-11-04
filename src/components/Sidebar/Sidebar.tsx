@@ -18,10 +18,18 @@ const Sidebar: React.FC<{ isOpen: boolean; toggle: () => void }> = (props) => {
       </Icon>
       <SideBarWrapper>
         <SideBarMenu>
-          <SideBarLink to="about">About</SideBarLink>
-          <SideBarLink to="about">Projects</SideBarLink>
-          <SideBarLink to="about">Technology</SideBarLink>
-          <SideBarLink to="about">Contact</SideBarLink>
+          <SideBarLink onClick={props.toggle} to="about">
+            About
+          </SideBarLink>
+          <SideBarLink onClick={props.toggle} to="about">
+            Projects
+          </SideBarLink>
+          <SideBarLink onClick={props.toggle} to="about">
+            Technology
+          </SideBarLink>
+          <SideBarLink onClick={props.toggle} to="about">
+            Contact
+          </SideBarLink>
         </SideBarMenu>
         <SideBtnWrap>
           <SideBarRoutes to="/signin">Sign In</SideBarRoutes>
