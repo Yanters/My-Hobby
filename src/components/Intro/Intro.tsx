@@ -35,9 +35,9 @@ const Intro = () => {
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary={true}
-            isDark={true}
-            isBig={true}
-            isFontBig={true}
+            darktext={true}
+            bigtext={true}
+            fontbig={true}
           >
             Get Started {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>

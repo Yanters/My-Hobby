@@ -111,16 +111,16 @@ export const IntroBtnWrapper = styled.div`
 
 export const Button = styled(LinkScroll)<{
   primary: boolean;
-  isBig: boolean;
-  isDark: boolean;
-  isFontBig: boolean;
+  bigtext: boolean;
+  darktext: boolean;
+  fontbig: boolean;
 }>`
   border-radius: 50px;
   background: ${({ primary }) => (primary ? "#01BF71" : "#010606")};
   white-space: nowrap;
-  padding: ${({ isBig }) => (isBig ? "14px 48px" : "12px 30px")};
-  color: ${({ isDark }) => (isDark ? "#010606" : "#fff")};
-  font-size: ${({ isFontBig }) => (isFontBig ? "20px" : "16px")};
+  padding: ${({ bigtext }) => (bigtext ? "14px 48px" : "12px 30px")};
+  color: ${({ darktext }) => (darktext ? "#010606" : "#fff")};
+  font-size: ${({ fontbig }) => (fontbig ? "20px" : "16px")};
   outline: none;
   border: none;
   cursor: pointer;
