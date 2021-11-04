@@ -8,7 +8,7 @@ export const IntroContainer = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0 30px;
-  height: 800px;
+  height: 100vh;
   position: relative;
   z-index: 1;
 
@@ -35,8 +35,8 @@ export const IntroBg = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  /* width: 120%; */
+  height: 100vh;
   overflow: hidden;
 
   :before {
