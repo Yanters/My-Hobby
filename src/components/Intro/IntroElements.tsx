@@ -36,7 +36,7 @@ export const IntroBg = styled.div`
   bottom: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   overflow: hidden;
 
   :before {
@@ -69,7 +69,6 @@ export const IntroContent = styled.div`
   max-width: 1200px;
   position: absolute;
   padding: 8px 24px;
-  margin-top: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
