@@ -28,7 +28,7 @@ export const AboutRow = styled.div<{ imgStart: any }>`
   display: flex;
   width: 100%;
   height: 100%;
-  flex-direction: row;
+  flex-direction: ${({ imgStart }) => (imgStart ? "row-reverse" : "row")};
   justify-content: space-evenly;
   align-items: center;
   align-content: center;
