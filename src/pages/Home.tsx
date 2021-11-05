@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import About from "../components/About/About";
 import { data, data2 } from "../components/About/Data";
+import Footer from "../components/Footer/Footer";
 import Intro from "../components/Intro/Intro";
 import Navbar from "../components/Navbar/Navbar";
 import Sidebar from "../components/Sidebar/Sidebar";
@@ -19,6 +20,7 @@ const Home = () => {
       <Intro />
       <About {...data} />
       <About {...data2} />
+      <Footer />
     </div>
   );
 };

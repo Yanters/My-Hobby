@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
+import { animateScroll as scroll } from "react-scroll";
 import {
   Nav,
   NavbarContainer,
@@ -13,30 +14,83 @@ import {
 } from "./NavbarElements";
 
 const Navbar: React.FC<{ toggle: () => void }> = (props) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const changeNavHandler = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeNavHandler);
+  }, []);
+
+  const toggleHomeHandler = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <>
-      <Nav>
+      <Nav scrollNav={scrollNav}>
         <NavbarContainer>
-          <NavLogo to="/">My Hobby</NavLogo>
+          <NavLogo to="/" onClick={toggleHomeHandler}>
+            My Hobby
+          </NavLogo>
           <MobileIcon onClick={props.toggle}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
             <NavItem>
-              <NavLinks to="about">About</NavLinks>
+              <NavLinks
+                to="about"
+                smooth={true}
+                duration={500}
+                spy={true}
+                offset={-80}
+              >
+                About
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="projects">Projects</NavLinks>
+              <NavLinks
+                to="projects"
+                smooth={true}
+                duration={500}
+                spy={true}
+                offset={-80}
+              >
+                Projects
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="technology">Technology</NavLinks>
+              <NavLinks
+                to="technology"
+                smooth={true}
+                duration={500}
+                spy={true}
+                offset={-80}
+              >
+                Technology
+              </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks to="contact">Contact</NavLinks>
+              <NavLinks
+                to="contact"
+                href="contact"
+                smooth={true}
+                duration={500}
+                spy={true}
+                offset={-80}
+              >
+                Contact
+              </NavLinks>
             </NavItem>
           </NavMenu>
           <NavBtn>
-            <NavBtnLink to="/signin">Sign In</NavBtnLink>
+            <NavBtnLink to="/sign-in">Sign In</NavBtnLink>
           </NavBtn>
         </NavbarContainer>
       </Nav>

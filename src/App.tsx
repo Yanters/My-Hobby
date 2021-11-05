@@ -1,14 +1,20 @@
 import React from "react";
-import { Route } from "react-router";
+import { Route, Switch } from "react-router";
 import "./App.css";
 import Home from "./pages/Home";
+import SignIn from "./pages/SignIn";
 
 function App() {
   return (
     <div>
-      <Route>
-        <Home />
-      </Route>
+      <Switch>
+        <Route path="/" exact>
+          <Home />
+        </Route>
+        <Route path="/sign-in" exact>
+          <SignIn />
+        </Route>
+      </Switch>
     </div>
   );
 }

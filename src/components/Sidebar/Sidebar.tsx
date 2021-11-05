@@ -18,16 +18,44 @@ const Sidebar: React.FC<{ isOpen: boolean; toggle: () => void }> = (props) => {
       </Icon>
       <SideBarWrapper>
         <SideBarMenu>
-          <SideBarLink onClick={props.toggle} to="about">
+          <SideBarLink
+            onClick={props.toggle}
+            to="about"
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80}
+          >
             About
           </SideBarLink>
-          <SideBarLink onClick={props.toggle} to="about">
+          <SideBarLink
+            onClick={props.toggle}
+            to="projects"
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80}
+          >
             Projects
           </SideBarLink>
-          <SideBarLink onClick={props.toggle} to="about">
+          <SideBarLink
+            onClick={props.toggle}
+            to="technologies"
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80}
+          >
             Technology
           </SideBarLink>
-          <SideBarLink onClick={props.toggle} to="about">
+          <SideBarLink
+            onClick={props.toggle}
+            to="contact"
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80}
+          >
             Contact
           </SideBarLink>
         </SideBarMenu>

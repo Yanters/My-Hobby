@@ -23,7 +23,7 @@ export const data2 = {
   id: "projects",
   isLight: true,
   lightText: false,
-  ligthTextDescription: true,
+  ligthTextDescription: false,
   topLine: "Pojects",
   headLine: "Let's have a look!",
   description: "Click the button below to see many WEB projects",
