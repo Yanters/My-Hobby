@@ -1,4 +1,5 @@
 import React from "react";
+import { animateScroll as scroll } from "react-scroll";
 
 import {
   FooterContainer,
@@ -14,6 +15,10 @@ import {
 } from "./FooterElements";
 
 const Footer = () => {
+  const toggleHomeHandler = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <>
       <FooterContainer>
@@ -21,11 +26,45 @@ const Footer = () => {
           <FooterLinksContainer>
             <FooterLinksWrapper>
               <FooterLinkItems>
-                <FooterLinkTitle>My Hobby</FooterLinkTitle>
-                <FooterLink to="about">What Is Programming</FooterLink>
-                <FooterLink to="projects">Projects</FooterLink>
-                <FooterLink to="technology">Technology</FooterLink>
-                <FooterLink to="contact">Contact</FooterLink>
+                <FooterLinkTitle onClick={toggleHomeHandler}>
+                  My Hobby
+                </FooterLinkTitle>
+                <FooterLink
+                  to="about"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-80}
+                >
+                  What Is Programming
+                </FooterLink>
+                <FooterLink
+                  to="projects"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-80}
+                >
+                  Projects
+                </FooterLink>
+                <FooterLink
+                  to="technology"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-80}
+                >
+                  Technology
+                </FooterLink>
+                <FooterLink
+                  to="contact"
+                  smooth={true}
+                  duration={500}
+                  spy={true}
+                  offset={-80}
+                >
+                  Contact
+                </FooterLink>
               </FooterLinkItems>
             </FooterLinksWrapper>
           </FooterLinksContainer>
