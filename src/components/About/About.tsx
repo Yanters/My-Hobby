@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "../Intro/IntroElements";
+import { Button, ButtonLink } from "../Intro/IntroElements";
 import {
   AboutContainer,
   AboutWrapper,
@@ -30,6 +30,7 @@ const About: React.FC<{
   dark: boolean;
   primary: boolean;
   darkText: boolean;
+  buttonLink: boolean;
 }> = (props) => {
   console.log(props);
   return (
@@ -45,19 +46,31 @@ const About: React.FC<{
                   {props.description}
                 </Subtitle>
                 <BtnWrap>
-                  <Button
-                    primary={props.primary ? true : false}
-                    darktext={!props.darkText}
-                    bigtext={true}
-                    fontbig={false}
-                    to="https://en.wikipedia.org/wiki/Computer_programming"
-                    smooth={true}
-                    duration={500}
-                    spy={true}
-                    offset={-80}
-                  >
-                    {props.buttonLabel}
-                  </Button>
+                  {props.buttonLink ? (
+                    <ButtonLink
+                      primary={props.primary ? true : false}
+                      darktext={!props.darkText}
+                      bigtext={true}
+                      fontbig={false}
+                      to="projects"
+                    >
+                      {props.buttonLabel}
+                    </ButtonLink>
+                  ) : (
+                    <Button
+                      primary={props.primary ? true : false}
+                      darktext={!props.darkText}
+                      bigtext={true}
+                      fontbig={false}
+                      to="projects"
+                      smooth={true}
+                      duration={500}
+                      spy={true}
+                      offset={-80}
+                    >
+                      {props.buttonLabel}
+                    </Button>
+                  )}
                 </BtnWrap>
               </TextWrapper>
             </Column1>

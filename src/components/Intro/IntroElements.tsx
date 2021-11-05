@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { MdKeyboardArrowRight, MdArrowForward } from "react-icons/md";
 import { Link as LinkScroll } from "react-scroll";
+import { Link as LinkRouter } from "react-router-dom";
 
 export const IntroContainer = styled.div`
   background: #0c0c0c;
@@ -110,6 +111,32 @@ export const IntroBtnWrapper = styled.div`
 `;
 
 export const Button = styled(LinkScroll)<{
+  primary: boolean;
+  bigtext: boolean;
+  darktext: boolean;
+  fontbig: boolean;
+}>`
+  border-radius: 50px;
+  background: ${({ primary }) => (primary ? "#01BF71" : "#010606")};
+  white-space: nowrap;
+  padding: ${({ bigtext }) => (bigtext ? "14px 48px" : "12px 30px")};
+  color: ${({ darktext }) => (darktext ? "#010606" : "#fff")};
+  font-size: ${({ fontbig }) => (fontbig ? "20px" : "16px")};
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.25s ease-in-out;
+
+  &:hover {
+    transition: all 0.25s ease-in-out;
+    background: ${({ primary }) => (primary ? "#fff" : "##01BF71")};
+  }
+`;
+
+export const ButtonLink = styled(LinkRouter)<{
   primary: boolean;
   bigtext: boolean;
   darktext: boolean;

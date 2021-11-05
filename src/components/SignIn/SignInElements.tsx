@@ -11,8 +11,8 @@ export const Container = styled.div`
   overflow: hidden;
   background: linear-gradient(
     108deg,
-    rgba (1, 147, 86, 1) 0%,
-    rgba (10, 201, 122, 1) 100%
+    rgba(1, 147, 86, 1) 0%,
+    rgba(10, 201, 122, 1) 100%
   );
 `;
 
@@ -67,7 +67,7 @@ export const Form = styled.form`
 export const FormH1 = styled.h1`
   margin-bottom: 40px;
   color: #fff;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 400;
   text-align: center;
 `;

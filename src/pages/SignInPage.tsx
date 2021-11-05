@@ -1,9 +1,11 @@
 import React from "react";
-import SignInC from "./SignIn";
+import SignInC from "../components/SignIn/SignIn";
+import ScrollToTop from "../components/ScrollToTop";
 
 const SignIn = () => {
   return (
     <>
+      <ScrollToTop />
       <SignInC />
     </>
   );

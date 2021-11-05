@@ -17,6 +17,7 @@ export const data = {
   dark: true,
   primary: true,
   darkText: false,
+  buttonLink: false,
 };
 
 export const data2 = {
@@ -34,4 +35,5 @@ export const data2 = {
   dark: false,
   primary: false,
   darkText: true,
+  buttonLink: true,
 };

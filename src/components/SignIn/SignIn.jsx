@@ -11,8 +11,20 @@ import {
   FormButton,
   Text,
 } from "./SignInElements";
+import { ButtonLink } from "../Intro/IntroElements";
+import * as $ from "jquery";
 
 const SignIn = () => {
+  $(document).ready(function () {
+    $("#buttonLink").hover(
+      function () {
+        $("#buttonLink").css("background", "linear-gradient(#747eee, #4856f0)");
+      },
+      function () {
+        $("#buttonLink").css("background", "#01bf71");
+      }
+    );
+  });
   return (
     <>
       <Container>
@@ -27,6 +39,17 @@ const SignIn = () => {
               <FormInput type="password" required />
               <FormButton type="submit">Continue</FormButton>
               <Text>Forgot password</Text>
+              <ButtonLink
+                id="buttonLink"
+                style={{ marginTop: "40px" }}
+                primary={true}
+                darktext={false}
+                bigtext={false}
+                fontbig={false}
+                to="sign-up"
+              >
+                Create an account
+              </ButtonLink>
             </Form>
           </FormContent>
         </FormWrap>

@@ -5,6 +5,7 @@ import Footer from "../components/Footer/Footer";
 import Intro from "../components/Intro/Intro";
 import Navbar from "../components/Navbar/Navbar";
 import Sidebar from "../components/Sidebar/Sidebar";
+import ScrollToTop from "../components/ScrollToTop";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -14,14 +15,15 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <>
+      <ScrollToTop />
       <Sidebar isOpen={isOpen} toggle={toggleHanlder} />
       <Navbar toggle={toggleHanlder} />
       <Intro />
       <About {...data} />
       <About {...data2} />
       <Footer />
-    </div>
+    </>
   );
 };
 

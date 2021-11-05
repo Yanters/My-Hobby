@@ -31,13 +31,17 @@ const Intro = () => {
         <IntroP>Some cool text about Programing ect.</IntroP>
         <IntroBtnWrapper>
           <Button
-            to="signup"
+            to="about"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary={true}
             darktext={true}
             bigtext={true}
             fontbig={true}
+            smooth={true}
+            duration={500}
+            spy={true}
+            offset={-80}
           >
             Get Started {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
