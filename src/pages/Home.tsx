@@ -6,6 +6,7 @@ import Intro from "../components/Intro/Intro";
 import Navbar from "../components/Navbar/Navbar";
 import Sidebar from "../components/Sidebar/Sidebar";
 import ScrollToTop from "../components/ScrollToTop";
+import Technology from "../components/Technology/Technology";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -22,6 +23,7 @@ const Home = () => {
       <Intro />
       <About {...data} />
       <About {...data2} />
+      <Technology />
       <Footer />
     </>
   );

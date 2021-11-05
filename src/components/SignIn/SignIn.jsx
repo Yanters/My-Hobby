@@ -18,7 +18,7 @@ const SignIn = () => {
   $(document).ready(function () {
     $("#buttonLink").hover(
       function () {
-        $("#buttonLink").css("background", "linear-gradient(#747eee, #4856f0)");
+        $("#buttonLink").css("background", "linear-gradient(#0ba867, #12774d)");
       },
       function () {
         $("#buttonLink").css("background", "#01bf71");

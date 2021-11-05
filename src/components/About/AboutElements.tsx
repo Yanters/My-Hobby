@@ -35,7 +35,8 @@ export const AboutRow = styled.div<{ imgStart: any }>`
   flex-shrink: 1;
 
   @media screen and (max-width: 768px) {
-    flex-wrap: ${({ imgStart }) => (imgStart ? "wrap" : `wrap-reverse`)};
+    flex-wrap: ${({ imgStart }) =>
+      imgStart ? "wrap-reverse" : `wrap-reverse`};
   }
 `;
 
@@ -44,7 +45,9 @@ export const Column1 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   flex-shrink: 1;
-
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   /* grid-area: col1; */
 `;
 
@@ -59,7 +62,12 @@ export const Column2 = styled.div`
 export const TextWrapper = styled.div`
   max-width: 540px;
   padding-top: 0;
+  width: 100%;
   padding-bottom: 60px;
+
+  @media screen and (max-width: 480px) {
+    padding-bottom: 0px;
+  }
 `;
 
 export const TopLine = styled.p`

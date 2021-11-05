@@ -40,7 +40,7 @@ const Sidebar: React.FC<{ isOpen: boolean; toggle: () => void }> = (props) => {
           </SideBarLink>
           <SideBarLink
             onClick={props.toggle}
-            to="technologies"
+            to="technology"
             smooth={true}
             duration={500}
             spy={true}
