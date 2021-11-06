@@ -3,8 +3,8 @@ import "./TimeSpend.css";
 
 const TimeSpend: React.FC<{ time: number }> = (props) => {
   return (
-    <div>
-      <div className="alert show">
+    <div id="alertBox">
+      <div className="alert">
         <span className="fa fa-bullhorn"></span>
         <span className="msg">Time spent on the website: {props.time}s</span>
         <div className="close-btn">

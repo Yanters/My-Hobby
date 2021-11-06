@@ -72,6 +72,20 @@ export const NavItem = styled.li`
   height: 80px;
 `;
 
+export const SubMenu = styled.div`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 96.5%;
+  cursor: pointer;
+
+  &::hover {
+    display: block;
+  }
+`;
+
 export const NavLinks = styled(LinkScroll)`
   color: #fff;
   display: flex;

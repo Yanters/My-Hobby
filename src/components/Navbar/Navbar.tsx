@@ -1,6 +1,8 @@
+import "./SubMenu.css";
 import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
 import TimeSpend from "../Alerts/TimeSpend";
+import LastVisit from "../Alerts/LastVisit";
 import { animateScroll as scroll } from "react-scroll";
 import {
   Nav,
@@ -12,6 +14,7 @@ import {
   NavLinks,
   NavBtn,
   NavBtnLink,
+  SubMenu,
 } from "./NavbarElements";
 import jquery from "jquery";
 
@@ -21,6 +24,7 @@ const $: JQueryStatic = jquery;
 const Navbar: React.FC<{ toggle: () => void }> = (props) => {
   const [scrollNav, setScrollNav] = useState(false);
   const [timeLive, setTimeLive] = useState(0);
+  const [LastTime, setLastTime] = useState(0);
   const changeNavHandler = () => {
     if (window.scrollY >= 80) {
       setScrollNav(true);
@@ -37,25 +41,50 @@ const Navbar: React.FC<{ toggle: () => void }> = (props) => {
     scroll.scrollToTop();
   };
 
-  const toggleInfo = () => {
+  const toggleSpentTime = () => {
     $(".alert").addClass("show");
     $(".alert").removeClass("hide");
     $(".alert").addClass("showAlert");
     setTimeout(function () {
       $(".alert").removeClass("show");
+      $(".alert").removeClass("showAlert");
       $(".alert").addClass("hide");
-    }, 5000);
+    }, 2000);
     $(".close-btn").click(function () {
       $(".alert").removeClass("show");
+      $(".alert").removeClass("showAlert");
       $(".alert").addClass("hide");
     });
-    console.log("done!@#");
+
     const firstVisitTimeStorage = sessionStorage.getItem("firstVisitTime");
     const firstVisitTime = firstVisitTimeStorage
       ? parseInt(firstVisitTimeStorage)
       : 0;
     var time = Math.round((Date.now() - firstVisitTime) / 1000);
     setTimeLive(time);
+  };
+
+  const toggleLastVisit = () => {
+    $(".alert2").addClass("show");
+    $(".alert2").removeClass("hide");
+    $(".alert2").addClass("showAlert");
+    setTimeout(function () {
+      $(".alert2").removeClass("show");
+      $(".alert2").removeClass("showAlert");
+      $(".alert2").addClass("hide");
+    }, 2000);
+    $(".close-btn2").click(function () {
+      $(".alert2").removeClass("show");
+      $(".alert2").removeClass("showAlert");
+      $(".alert2").addClass("hide");
+    });
+
+    console.log("done!@#");
+    const LastVisitTimeStorage = localStorage.getItem("LastVisitTime");
+    const LastVisitTime = LastVisitTimeStorage
+      ? parseInt(LastVisitTimeStorage)
+      : 0;
+    setLastTime(LastVisitTime);
   };
 
   return (
@@ -114,17 +143,23 @@ const Navbar: React.FC<{ toggle: () => void }> = (props) => {
               </NavLinks>
             </NavItem>
             <NavItem>
-              <NavLinks
-                to=""
-                smooth={true}
-                duration={500}
-                spy={true}
-                offset={-80}
-                id="timer"
-                onClick={toggleInfo}
-              >
-                Info
-              </NavLinks>
+              <div className="dropdown">
+                <SubMenu>
+                  Info
+                  <i
+                    style={{ marginLeft: "10px" }}
+                    className="fa fa-caret-down"
+                  ></i>
+                </SubMenu>
+                <div className="dropdown-content">
+                  <span className="sub" onClick={toggleSpentTime}>
+                    Time Spent
+                  </span>
+                  <span className="sub" onClick={toggleLastVisit}>
+                    Last Visit
+                  </span>
+                </div>
+              </div>
             </NavItem>
           </NavMenu>
           <NavBtn>
@@ -133,6 +168,7 @@ const Navbar: React.FC<{ toggle: () => void }> = (props) => {
         </NavbarContainer>
       </Nav>
       <TimeSpend time={timeLive} />
+      <LastVisit time={LastTime} />
     </>
   );
 };

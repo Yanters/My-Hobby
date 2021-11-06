@@ -32,7 +32,6 @@ const About: React.FC<{
   darkText: boolean;
   buttonLink: boolean;
 }> = (props) => {
-  console.log(props);
   return (
     <>
       <AboutContainer id={props.id} isLight={props.isLight}>

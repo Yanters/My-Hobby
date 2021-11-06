@@ -175,7 +175,7 @@ export default function Timers() {
   };
   window.onunload = function () {
     var time = Date.now();
-    localStorage.setItem("timeLeftSite", time);
+    localStorage.setItem("LastVisitTime", time);
   };
 
   var timer = myTimer();
