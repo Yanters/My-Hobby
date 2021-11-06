@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import About from "../components/About/About";
-import { data, data2 } from "../components/About/Data";
+import { data, data2, data3 } from "../components/About/Data";
 import Footer from "../components/Footer/Footer";
 import Intro from "../components/Intro/Intro";
 import Navbar from "../components/Navbar/Navbar";
@@ -24,6 +24,7 @@ const Home = () => {
       <About {...data} />
       <About {...data2} />
       <Technology />
+      <About {...data3} />
       <Footer />
     </>
   );

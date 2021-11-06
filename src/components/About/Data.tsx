@@ -1,5 +1,6 @@
 import image from "../../images/1.svg";
 import image2 from "../../images/2.svg";
+import image3 from "../../images/5.svg";
 
 export const data = {
   id: "about",
@@ -31,6 +32,24 @@ export const data2 = {
   buttonLabel: "Go to Projects!",
   imgStart: false,
   img: image2,
+  alt: "Projects",
+  dark: false,
+  primary: false,
+  darkText: true,
+  buttonLink: true,
+};
+
+export const data3 = {
+  id: "contact",
+  isLight: true,
+  lightText: false,
+  ligthTextDescription: false,
+  topLine: "Contact",
+  headLine: "Let's connect!",
+  description: "Write to me and let's code something together!",
+  buttonLabel: "Contact me",
+  imgStart: false,
+  img: image3,
   alt: "Projects",
   dark: false,
   primary: false,
