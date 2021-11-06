@@ -110,10 +110,20 @@ const FormSignup = ({ submitForm }) => {
         <div class="ui-widget">
           <label for="tags">Technology </label>
 
-          <input id="tags" type="text" required />
+          <input
+            id="tags"
+            type="text"
+            placeholder="Technologies we should use in our project"
+            required
+          />
         </div>
         <label htmlFor="datemin">DeadLine</label>
-        <input type="text" id="datepicker" />
+        <input
+          type="text"
+          id="datepicker"
+          placeholder="Pick DeadLine for project"
+          required
+        />
 
         <label htmlFor="country">Country Office</label>
         <select id="country" name="country">
@@ -125,7 +135,7 @@ const FormSignup = ({ submitForm }) => {
         <textarea
           id="subject"
           name="subject"
-          placeholder="Write something.."
+          placeholder="More details about the project..."
           style={{ height: "100px" }}
           required
         ></textarea>

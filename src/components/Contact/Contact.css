@@ -22,17 +22,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-/* 
-.close-btn {
-  position: absolute;
-  top: 2%;
-  right: 3%;
-  font-size: 1.5rem;
-  z-index: 1;
-  color: #fff;
-  cursor: pointer;
-} */
-
 .form-content-left {
   background: linear-gradient(
     90deg,
@@ -43,19 +32,9 @@
   position: relative;
 }
 
-.form-img {
-  width: 80%;
-  height: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .form-img-2 {
-  width: 60%;
-  height: 60%;
-  position: absolute;
+  width: 600%;
+  height: 600%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

@@ -1,20 +1,20 @@
 import React, { useState } from "react";
-import "./Contact.css";
+import "./Form.css";
 import FormSignup from "./FormContact";
 import FormSuccess from "./FormSuccess";
-import image5 from "../../images/5.svg";
 
-const Contact = () => {
+const Form = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   function submitForm() {
     setIsSubmitted(true);
   }
   return (
-    <div className="contact-container">
+    <>
       <div className="form-container">
+        <span className="close-btn">×</span>
         <div className="form-content-left">
-          <img className="form-img" src={image5} alt="spaceship" />
+          <img className="form-img" src="img/img-2.svg" alt="spaceship" />
         </div>
         {!isSubmitted ? (
           <FormSignup submitForm={submitForm} />
@@ -22,8 +22,8 @@ const Contact = () => {
           <FormSuccess />
         )}
       </div>
-    </div>
+    </>
   );
 };
 
-export default Contact;
+export default Form;
