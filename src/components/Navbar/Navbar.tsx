@@ -79,13 +79,23 @@ const Navbar: React.FC<{ toggle: () => void }> = (props) => {
             <NavItem>
               <NavLinks
                 to="contact"
-                href="contact"
                 smooth={true}
                 duration={500}
                 spy={true}
                 offset={-80}
               >
                 Contact
+              </NavLinks>
+            </NavItem>
+            <NavItem>
+              <NavLinks
+                to=""
+                smooth={true}
+                duration={500}
+                spy={true}
+                offset={-80}
+              >
+                Info
               </NavLinks>
             </NavItem>
           </NavMenu>

@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Sidebar from "../components/Sidebar/Sidebar";
 import ScrollToTop from "../components/ScrollToTop";
 import Technology from "../components/Technology/Technology";
+import Timers from "../components/Timers";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
@@ -18,6 +19,7 @@ const Home = () => {
   return (
     <>
       <ScrollToTop />
+      <Timers />
       <Sidebar isOpen={isOpen} toggle={toggleHanlder} />
       <Navbar toggle={toggleHanlder} />
       <Intro />
