@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch } from "react-router";
 import "./App.css";
+import ContactPage from "./pages/ContactPage";
 import Home from "./pages/Home";
 import Projects from "./pages/ProjectsPage";
 import SignIn from "./pages/SignInPage";
@@ -21,6 +22,9 @@ function App() {
         </Route>
         <Route path="/projects" exact>
           <Projects />
+        </Route>
+        <Route path="/contact" exact>
+          <ContactPage />
         </Route>
       </Switch>
     </div>

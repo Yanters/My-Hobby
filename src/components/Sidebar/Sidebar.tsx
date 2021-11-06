@@ -60,7 +60,7 @@ const Sidebar: React.FC<{ isOpen: boolean; toggle: () => void }> = (props) => {
           </SideBarLink>
         </SideBarMenu>
         <SideBtnWrap>
-          <SideBarRoutes to="/signin">Sign In</SideBarRoutes>
+          <SideBarRoutes to="/sign-in">Sign In</SideBarRoutes>
         </SideBtnWrap>
       </SideBarWrapper>
     </SideBarContainer>

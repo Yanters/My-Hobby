@@ -51,7 +51,7 @@ const About: React.FC<{
                       darktext={!props.darkText}
                       bigtext={true}
                       fontbig={false}
-                      to="projects"
+                      to={props.id}
                     >
                       {props.buttonLabel}
                     </ButtonLink>
