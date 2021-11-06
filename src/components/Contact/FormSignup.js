@@ -1,16 +1,54 @@
 import React from "react";
 import "./Contact.css";
-// import * as $ from "jquery";
+import $ from "jquery";
+import "jquery-ui-dist/jquery-ui";
+
 const FormSignup = ({ submitForm }) => {
   const submitHandler = (e) => {
     e.preventDefault();
     submitForm(true);
   };
 
+  $(function () {
+    $("#datepicker").datepicker();
+  });
+
+  $(function () {
+    var availableTags = [
+      "ActionScript",
+      "AppleScript",
+      "Asp",
+      "BASIC",
+      "C",
+      "C++",
+      "Clojure",
+      "COBOL",
+      "ColdFusion",
+      "Erlang",
+      "Fortran",
+      "Groovy",
+      "Haskell",
+      "Java",
+      "JavaScript",
+      "Lisp",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Scala",
+      "Scheme",
+      "React",
+      "TypeScript",
+    ];
+    $("#tags").autocomplete({
+      source: availableTags,
+    });
+  });
+
   return (
     <div className="container">
       <form action="" onSubmit={submitHandler}>
-        <label for="fname">First Name</label>
+        <label htmlFor="fname">First Name</label>
         <input
           type="text"
           id="fname"
@@ -18,7 +56,7 @@ const FormSignup = ({ submitForm }) => {
           placeholder="Your name..."
           required
         />
-        <label for="lname">Last Name</label>
+        <label htmlFor="lname">Last Name</label>
         <input
           type="text"
           id="lname"
@@ -28,7 +66,7 @@ const FormSignup = ({ submitForm }) => {
         />
         <div>
           <div>
-            <label for="male">Gender</label>
+            <label htmlFor="male">Gender</label>
           </div>
           <div
             style={{
@@ -48,20 +86,19 @@ const FormSignup = ({ submitForm }) => {
                 value="Male"
                 required
               />
-              <label for="male"> Male</label>
+              <label htmlFor="male"> Male</label>
             </div>
             <div>
               <input type="radio" id="female" name="gender" value="Female" />
-              <label for="female"> Female</label>
+              <label htmlFor="female"> Female</label>
             </div>
             <div>
               <input type="radio" id="other" name="gender" value="Other" />
-              <label for="other"> Other</label>
+              <label htmlFor="other"> Other</label>
             </div>
           </div>
         </div>
-        <br />
-        <label for="phone">Phone number</label>
+        <label htmlFor="phone">Phone number</label>
         <input
           type="tel"
           id="phone"
@@ -70,29 +107,26 @@ const FormSignup = ({ submitForm }) => {
           placeholder="111-222-333"
           required
         />
-        <label for="datemin">DeadLine</label>
-        <br /> <br />
-        <input
-          type="date"
-          id="datemin"
-          name="datemin"
-          min="2021-11-06"
-          required
-        />
-        <br />
-        <br />
-        <label for="country">Country Office</label>
+        <div class="ui-widget">
+          <label for="tags">Technology </label>
+
+          <input id="tags" type="text" required />
+        </div>
+        <label htmlFor="datemin">DeadLine</label>
+        <input type="text" id="datepicker" />
+
+        <label htmlFor="country">Country Office</label>
         <select id="country" name="country">
           <option value="australia">Australia</option>
           <option value="canada">Canada</option>
           <option value="usa">USA</option>
         </select>
-        <label for="subject">Project Description</label>
+        <label htmlFor="subject">Project Description</label>
         <textarea
           id="subject"
           name="subject"
           placeholder="Write something.."
-          style={{ height: "200px" }}
+          style={{ height: "100px" }}
           required
         ></textarea>
         <input type="submit" value="Submit"></input>
