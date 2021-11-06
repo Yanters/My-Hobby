@@ -164,7 +164,7 @@ export default function Timers() {
       var time =
         Date.now() - parseInt(sessionStorage.getItem("firstVisitTime"));
       localStorage.setItem("timeOnSite", time);
-      console.log(time / 1000 + " seconds have passed since first visit");
+      // console.log(time / 1000 + " seconds have passed since first visit");
     }, 1000);
     return myInterval;
   }

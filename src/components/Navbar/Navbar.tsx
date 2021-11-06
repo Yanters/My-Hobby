@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
+import TimeSpend from "../Alerts/TimeSpend";
 import { animateScroll as scroll } from "react-scroll";
 import {
   Nav,
@@ -12,10 +13,14 @@ import {
   NavBtn,
   NavBtnLink,
 } from "./NavbarElements";
+import jquery from "jquery";
+
+// this helps TypeScript to understand jQuery best !!!  otherwise It will confused .
+const $: JQueryStatic = jquery;
 
 const Navbar: React.FC<{ toggle: () => void }> = (props) => {
   const [scrollNav, setScrollNav] = useState(false);
-
+  const [timeLive, setTimeLive] = useState(0);
   const changeNavHandler = () => {
     if (window.scrollY >= 80) {
       setScrollNav(true);
@@ -30,6 +35,27 @@ const Navbar: React.FC<{ toggle: () => void }> = (props) => {
 
   const toggleHomeHandler = () => {
     scroll.scrollToTop();
+  };
+
+  const toggleInfo = () => {
+    $(".alert").addClass("show");
+    $(".alert").removeClass("hide");
+    $(".alert").addClass("showAlert");
+    setTimeout(function () {
+      $(".alert").removeClass("show");
+      $(".alert").addClass("hide");
+    }, 5000);
+    $(".close-btn").click(function () {
+      $(".alert").removeClass("show");
+      $(".alert").addClass("hide");
+    });
+    console.log("done!@#");
+    const firstVisitTimeStorage = sessionStorage.getItem("firstVisitTime");
+    const firstVisitTime = firstVisitTimeStorage
+      ? parseInt(firstVisitTimeStorage)
+      : 0;
+    var time = Math.round((Date.now() - firstVisitTime) / 1000);
+    setTimeLive(time);
   };
 
   return (
@@ -94,6 +120,8 @@ const Navbar: React.FC<{ toggle: () => void }> = (props) => {
                 duration={500}
                 spy={true}
                 offset={-80}
+                id="timer"
+                onClick={toggleInfo}
               >
                 Info
               </NavLinks>
@@ -104,6 +132,7 @@ const Navbar: React.FC<{ toggle: () => void }> = (props) => {
           </NavBtn>
         </NavbarContainer>
       </Nav>
+      <TimeSpend time={timeLive} />
     </>
   );
 };
