@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Contact.css";
-import FormSignup from "./FormContact";
+import FormContact from "./FormContact";
 import FormSuccess from "./FormSuccess";
 import image5 from "../../images/5.svg";
 
@@ -17,7 +17,7 @@ const Contact = () => {
           <img className="form-img" src={image5} alt="spaceship" />
         </div>
         {!isSubmitted ? (
-          <FormSignup submitForm={submitForm} />
+          <FormContact submitForm={submitForm} />
         ) : (
           <FormSuccess />
         )}

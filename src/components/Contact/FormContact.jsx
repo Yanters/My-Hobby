@@ -123,6 +123,7 @@ const FormSignup = ({ submitForm }) => {
           id="datepicker"
           placeholder="Pick DeadLine for project"
           required
+          maxLength="0"
         />
 
         <label htmlFor="country">Country Office</label>

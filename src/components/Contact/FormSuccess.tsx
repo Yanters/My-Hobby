@@ -1,5 +1,5 @@
 import React from "react";
-import "./Form.css";
+import "./Contact.css";
 import image6 from "../../images/6.svg";
 
 const FormSuccess = () => {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Form.css";
+import "./Contact.css";
 import FormSignup from "./FormContact";
 import FormSuccess from "./FormSuccess";
 
