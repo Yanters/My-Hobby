@@ -2,7 +2,6 @@ import React from "react";
 import "./Contact.css";
 import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
-
 const FormSignup = ({ submitForm }) => {
   const submitHandler = (e) => {
     e.preventDefault();

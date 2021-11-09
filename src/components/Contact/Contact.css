@@ -1,5 +1,4 @@
 .contact-container {
-  display: flex;
   position: fixed;
   top: 0;
   left: 0;
@@ -15,13 +14,36 @@
 
 .form-container {
   margin: 50px;
+  /* width: 80vw; */
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
   position: relative;
-  height: fit-content;
   border-radius: 10px;
+  min-height: 60vh;
+  height: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+/* .form-container-submit {
+  margin: 50px;
+  /* width: 80vw; 
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 10px;
+  height: 60vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+} */
+/* 
+.close-btn {
+  position: absolute;
+  top: 2%;
+  right: 3%;
+  font-size: 1.5rem;
+  z-index: 1;
+  color: #fff;
+  cursor: pointer;
+} */
+
 .form-content-left {
   background: linear-gradient(
     90deg,
@@ -32,17 +54,18 @@
   position: relative;
 }
 
-.form-img-2 {
-  width: 600%;
-  height: 600%;
+.form-img {
+  width: 80%;
+  height: 80%;
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
-.form-img {
-  width: 80%;
-  height: 80%;
+.form-img-2 {
+  width: 60%;
+  height: 60%;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -159,17 +182,6 @@
 input[type="text"],
 select,
 textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-}
-
-#types {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
