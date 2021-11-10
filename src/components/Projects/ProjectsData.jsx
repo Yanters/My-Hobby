@@ -1,36 +1,57 @@
-import image3 from "../../images/YelpCamp.jpg";
+import image1 from "../../images/YelpCamp.jpg";
+import image2 from "../../images/CryptoCurrency.jpg";
+import image3 from "../../images/MessengerApp.jpg";
+import image4 from "../../images/MyHobby.jpg";
+import image5 from "../../images/ParalaxScrolling.jpg";
+import image6 from "../../images/MuseumOfCandy.jpg";
 
 export const projects = [
   {
-    title: "MERN Memories",
+    title: "YelpCamp",
     description:
-      "Using React, Node.js, Express & MongoDB you'll learn how to build a Full Stack MERN Application - from start to finish. The App is called Memories and it is a simple social media app that allows users to post interesting events that happened in their lives.",
-    img: image3,
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: image1,
     link: "https://github.com/Yanters/YelpCamp",
     id: 0,
   },
   {
-    title: "E-Commerce",
+    title: "CryptoCurrency",
     description:
-      "While building it you're going to learn many advanced React & JavaScript topics, as well as how to use Stripe for card transactions. On top of that, at the end of the video, you will have this unique and complex webshop app that you will be able to add to your portfolio. And trust me, e-commerce applications are impressive.",
-    img: image3,
-    link: "https://github.com/Yanters/YelpCamp",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: image2,
+    link: "https://github.com/Yanters/Cryptocurrency-App",
     id: 1,
   },
   {
-    title: "WebRTC App",
+    title: "Messenger App",
     description:
-      "This is a code repository for the corresponding YouTube video. In this tutorial, we're going to build and deploy a React Video Chat Application using WebRTC.",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
     img: image3,
-    link: "https://github.com/Yanters/YelpCamp",
+    link: "https://github.com/Yanters/Messenger-App",
     id: 2,
   },
   {
-    title: "Unichat",
+    title: "My Hobby",
     description:
-      "This is a code repository for the corresponding video tutorial. In this video, we will create a full Realtime Chat Application",
-    img: image3,
-    link: "https://github.com/Yanters/YelpCamp",
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: image4,
+    link: "https://github.com/Yanters/My-Hobby",
     id: 3,
+  },
+  {
+    title: "Paralax Scrolling",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: image5,
+    link: "https://github.com/Yanters/Parallax-Scrolling",
+    id: 4,
+  },
+  {
+    title: "Museum Of Candy",
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+    img: image6,
+    link: "https://github.com/Yanters/Museum-of-Candy",
+    id: 5,
   },
 ];

@@ -1,27 +1,8 @@
 import React from "react";
 import "./Projectcss.css";
-import {
-  // BlogCard,
-  // CardInfo,
-  // ExternalLinks,
-  // GridContainer,
-  // HeaderThree,
-  // Hr,
-  // Tag,
-  // TagList,
-  // TitleContent,
-  // UtilityList,
-  // Img,
-  // Section,
-  // SectionDivider,
-  // SectionTitle,
-  ProjectsContainer,
-  // ProjectsDisplay,
-} from "./ProjectsElements";
-// import image3 from "../../images/5.svg";
+import { ProjectsContainer } from "./ProjectsElements";
 
 import { projects } from "./ProjectsData";
-// import Navbar from "../Navbar/Navbar";
 import { Icon } from "../SignIn/SignInElements";
 import Card from "./Card";
 
@@ -29,9 +10,11 @@ const Projects = () => {
   return (
     <ProjectsContainer>
       <div style={{ width: "100%", padding: "20px 0px" }}>
-        <Icon style={{ marginTop: "200px" }} to="/">
+        <Icon style={{ marginTop: "200px", marginBottom: "200px" }} to="/">
           My Hobby
         </Icon>
+        <br />
+        <br />
       </div>
       <div className="wrapper">
         {projects.map((project) => (
@@ -43,25 +26,75 @@ const Projects = () => {
             link={project.link}
           />
         ))}
-        <Card
-          img="https://images.unsplash.com/photo-1536304929831-ee1ca9d44906?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-          title="The Everyday Salad"
-          description="Take your boring salads up a knotch. This recipe is perfect for lunch
-      and only contains 5 ingredients!"
-        />
-
-        <Card
-          img="https://images.unsplash.com/photo-1476124369491-e7addf5db371?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-          title="Simple Risotto"
-          description="Fear Risotto no more! This simple recipe is perfect for family dinners."
-        />
-
-        <Card
-          img="https://images.unsplash.com/photo-1529928520614-7c76e2d99740?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ"
-          title="Baked Cod with Vegetables"
-          description="Baked Cod with Vegetables. 30 minute meal!"
-        />
       </div>
+      <br />
+      <br />
+      <Icon style={{ marginTop: "200px", marginBottom: "200px" }} to="/">
+        Summary
+      </Icon>
+      <br />
+      <br />
+      <div
+        style={{
+          display: "flex",
+          width: "80vw",
+          margin: "auto",
+          alignContent: "center",
+          justifyContent: "center",
+        }}
+      >
+        <table>
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Title</th>
+              <th>Time Spend</th>
+              <th>Technologies</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>YelpCamp</td>
+              <td>~100h</td>
+              <td>Node JS | DataBase</td>
+            </tr>
+            <tr>
+              <td>4</td>
+              <td>My Hobby</td>
+              <td>~70h</td>
+              <td>React JS | Jquery</td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td>CryptoCurrency</td>
+              <td>~10h</td>
+              <td>React JS | Redux | RapidAPI</td>
+            </tr>
+            <tr>
+              <td>3</td>
+              <td>Messenger App</td>
+              <td>~8h</td>
+              <td>React JS | Firebase | Chat Engine</td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td>Paralax Scrolling</td>
+              <td>~5h</td>
+              <td>HTML | CSS | JS</td>
+            </tr>
+            <tr>
+              <td>6</td>
+              <td>Museum Of Candy</td>
+              <td>~2h</td>
+              <td>HTML | CSS</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <br />
+      <br /> <br />
+      <br />
     </ProjectsContainer>
   );
 };
