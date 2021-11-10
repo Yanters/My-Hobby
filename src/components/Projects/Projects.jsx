@@ -29,6 +29,8 @@ const Projects = () => {
       </div>
       <br />
       <br />
+      <br />
+      <br />
       <Icon style={{ marginTop: "200px", marginBottom: "200px" }} to="/">
         Summary
       </Icon>
@@ -48,7 +50,7 @@ const Projects = () => {
             <tr>
               <th>Number</th>
               <th>Title</th>
-              <th>Time Spend</th>
+              <th>Time Spent</th>
               <th>Technologies</th>
             </tr>
           </thead>
@@ -60,19 +62,19 @@ const Projects = () => {
               <td>Node JS | DataBase</td>
             </tr>
             <tr>
-              <td>4</td>
+              <td>2</td>
               <td>My Hobby</td>
               <td>~70h</td>
               <td>React JS | Jquery</td>
             </tr>
             <tr>
-              <td>2</td>
+              <td>3</td>
               <td>CryptoCurrency</td>
               <td>~10h</td>
               <td>React JS | Redux | RapidAPI</td>
             </tr>
             <tr>
-              <td>3</td>
+              <td>4</td>
               <td>Messenger App</td>
               <td>~8h</td>
               <td>React JS | Firebase | Chat Engine</td>
