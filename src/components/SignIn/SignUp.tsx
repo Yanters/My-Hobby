@@ -12,6 +12,14 @@ import {
 } from "./SignInElements";
 
 const SignIn = () => {
+  const notPossibleHandler = () => {
+    var appendParent = document.getElementById("createAccount");
+    if (appendParent != null) {
+      appendParent.style.background = "#B80F0A";
+      appendParent.innerText = "Account already created";
+    }
+  };
+
   return (
     <>
       <Container>
@@ -28,7 +36,13 @@ const SignIn = () => {
               <FormInput type="password" required />
               <FormLabel htmlFor="for">Repeat Password</FormLabel>
               <FormInput type="password" required />
-              <FormButton type="submit">Create Account</FormButton>
+              <FormButton
+                type="submit"
+                id="createAccount"
+                onClick={notPossibleHandler}
+              >
+                Create Account
+              </FormButton>
             </Form>
           </FormContent>
         </FormWrap>

@@ -12,7 +12,7 @@ import {
   Text,
 } from "./SignInElements";
 import { ButtonLink } from "../Intro/IntroElements";
-import * as $ from "jquery";
+import $ from "jquery";
 
 const SignIn = () => {
   $(document).ready(function () {
@@ -25,19 +25,36 @@ const SignIn = () => {
       }
     );
   });
+
+  const appendInfoHandler = () => {
+    const isExisting = document.getElementsByClassName("appended")[0];
+    if (isExisting) return;
+    const appendParent = document.getElementById("append");
+    var toAppend = document.createElement("div");
+    toAppend.classList.add("appended");
+    toAppend.style.color = "white";
+    toAppend.style.textAlign = "center";
+    toAppend.style.marginTop = "20px";
+    var content = document.createTextNode("Wrong Login Or Password!");
+    toAppend.appendChild(content);
+    appendParent?.appendChild(toAppend);
+  };
+
   return (
     <>
       <Container>
         <FormWrap>
           <Icon to="/">My Hobby</Icon>
           <FormContent>
-            <Form action="#">
+            <Form action="#" id="append">
               <FormH1>Sign In</FormH1>
               <FormLabel htmlFor="for">Email</FormLabel>
               <FormInput type="email" required />
               <FormLabel htmlFor="for">Password</FormLabel>
               <FormInput type="password" required />
-              <FormButton type="submit">Continue</FormButton>
+              <FormButton type="submit" onClick={appendInfoHandler}>
+                Continue
+              </FormButton>
               <Text>Forgot password</Text>
               <ButtonLink
                 id="buttonLink"
