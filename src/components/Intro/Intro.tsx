@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import { ReactTypical } from "@deadcoder0904/react-typical";
 import Video from "../../images/intro.mp4";
 import {
   IntroContainer,
@@ -7,7 +8,6 @@ import {
   VideoBg,
   IntroContent,
   IntroH1,
-  IntroP,
   IntroBtnWrapper,
   Button,
   ArrowForward,
@@ -27,8 +27,23 @@ const Intro = () => {
         <VideoBg loop autoPlay muted src={Video} typeof="video/mp4" />
       </IntroBg>
       <IntroContent>
-        <IntroH1>Programming...</IntroH1>
-        <IntroP>Some cool text about Programing ect.</IntroP>
+        <IntroH1>
+          My Hobby is...
+          <ReactTypical
+            steps={[
+              "Programming",
+              6000,
+              "Coding",
+              6000,
+              "Making Fun Stuff",
+              6000,
+              "Being Creative",
+              6000,
+            ]}
+            loop={Infinity}
+            wrapper="p"
+          />
+        </IntroH1>
         <IntroBtnWrapper>
           <Button
             to="about"
