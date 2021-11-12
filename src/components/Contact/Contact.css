@@ -54,6 +54,21 @@
   position: relative;
 }
 
+@media screen and (max-width: 768px) {
+  .form-content-left {
+    display: none;
+  }
+  .form-container {
+    display: block;
+    width: 80%;
+    margin: 10px;
+  }
+  .container {
+    width: 100%;
+    border-radius: 10px;
+  }
+}
+
 .form-img {
   width: 80%;
   height: 80%;
