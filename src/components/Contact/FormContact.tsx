@@ -2,8 +2,8 @@ import React from "react";
 import "./Contact.css";
 import $ from "jquery";
 import "jquery-ui-dist/jquery-ui";
-const FormSignup = ({ submitForm }) => {
-  const submitHandler = (e) => {
+const FormSignup = ({ submitForm }: any) => {
+  const submitHandler = (e: any) => {
     e.preventDefault();
     submitForm(true);
   };
@@ -106,8 +106,8 @@ const FormSignup = ({ submitForm }) => {
           placeholder="111-222-333"
           required
         />
-        <div class="ui-widget">
-          <label for="tags">Technology </label>
+        <div className="ui-widget">
+          <label htmlFor="tags">Technology </label>
 
           <input
             id="tags"
@@ -122,7 +122,7 @@ const FormSignup = ({ submitForm }) => {
           id="datepicker"
           placeholder="Pick DeadLine for project"
           required
-          maxLength="0"
+          maxLength={0}
           autoComplete="off"
         />
 
