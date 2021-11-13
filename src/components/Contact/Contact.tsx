@@ -11,7 +11,13 @@ const Contact = () => {
     setIsSubmitted(true);
   }
   return (
-    <div className="contact-container">
+    <div
+      className={
+        !isSubmitted
+          ? "contact-container"
+          : "contact-container contact-container2"
+      }
+    >
       <div className="form-container">
         <div className="form-content-left">
           <img className="form-img" src={image5} alt="spaceship" />

@@ -226,12 +226,14 @@ input[type="submit"]:hover {
   .container {
     width: 100%;
     border-radius: 10px;
+    margin: auto;
   }
-  .contact-container {
+  .contact-container2 {
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
   }
   .form-success {
     height: 80vh;
