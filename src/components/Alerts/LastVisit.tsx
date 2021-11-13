@@ -14,8 +14,6 @@ const LastVisit: React.FC<{ time: number }> = (props) => {
     ":" +
     ("0" + d.getMinutes()).slice(-2);
 
-  // 16-05-2015 09:50
-
   return (
     <div id="alertBox2">
       <div className="alert2">

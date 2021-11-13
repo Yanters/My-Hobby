@@ -18,7 +18,6 @@ import {
 } from "./NavbarElements";
 import jquery from "jquery";
 
-// this helps TypeScript to understand jQuery best !!!  otherwise It will confused .
 const $: JQueryStatic = jquery;
 
 const Navbar: React.FC<{ toggle: () => void }> = (props) => {

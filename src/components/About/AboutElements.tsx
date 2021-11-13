@@ -5,10 +5,6 @@ export const AboutContainer = styled.div<{ isLight: boolean }>`
   background: ${({ isLight }) => (isLight ? "#f9f9f9" : "#010606")};
   height: 100vh;
   display: flex;
-
-  /* @media screen and (max-width: 768px) {
-    padding: 100px 0;
-  } */
 `;
 
 export const AboutWrapper = styled.div`
@@ -48,7 +44,6 @@ export const Column1 = styled.div`
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  /* grid-area: col1; */
 `;
 
 export const Column2 = styled.div`
@@ -56,7 +51,6 @@ export const Column2 = styled.div`
   margin-bottom: 15px;
   padding: 0 15px;
   flex-shrink: 1;
-  /* grid-area: col2; */
 `;
 
 export const TextWrapper = styled.div`
@@ -106,7 +100,6 @@ export const BtnWrap = styled.div`
 `;
 
 export const ImgWrap = styled.div`
-  /* max-width: 555px; */
   height: 100%;
   display: flex;
   align-items: center;
@@ -115,8 +108,6 @@ export const ImgWrap = styled.div`
 
 export const Img = styled.img`
   max-width: 100%;
-  /* width: 100%; */
-  /* height: 100%; */
   margin: 0 0 10px 0;
   padding-right: 0;
 

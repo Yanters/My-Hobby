@@ -14,7 +14,6 @@
 
 .form-container {
   margin: 50px;
-  /* width: 80vw; */
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
   position: relative;
   border-radius: 10px;
@@ -23,26 +22,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-/* .form-container-submit {
-  margin: 50px;
-  /* width: 80vw; 
-  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
-  position: relative;
-  border-radius: 10px;
-  height: 60vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-} */
-/* 
-.close-btn {
-  position: absolute;
-  top: 2%;
-  right: 3%;
-  font-size: 1.5rem;
-  z-index: 1;
-  color: #fff;
-  cursor: pointer;
-} */
 
 .form-content-left {
   background: linear-gradient(

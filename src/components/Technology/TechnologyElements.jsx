@@ -41,10 +41,6 @@ export const ListItem = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 3rem;
-
-  /* @media screen and (max-width: 480px) {
-    flex-wrap: wrap-reverse;
-  } */
 `;
 
 export const ListIcon = styled.img`
@@ -55,7 +51,6 @@ export const ListIcon = styled.img`
 `;
 
 export const ImgWrap = styled.div`
-  /* max-width: 555px; */
   height: 100%;
   display: flex;
   align-items: center;
@@ -67,8 +62,7 @@ export const ImgWrap = styled.div`
 
 export const Img = styled.img`
   max-width: 100%;
-  /* width: 100%; */
-  /* height: 100%; */
+
   margin: 0 0 10px 0;
   padding-right: 0;
 
