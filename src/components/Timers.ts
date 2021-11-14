@@ -5,20 +5,7 @@ export default function Timers() {
       if (!localStorage.getItem("timeOnSite")) {
         sessionStorage.setItem("firstVisitTime", myDate.toString());
       } else {
-        const tabsCountStorage = localStorage.getItem("tabsCount");
-        const tabsCount = tabsCountStorage ? parseInt(tabsCountStorage) : 0;
-        if (localStorage.getItem("tabsCount") && tabsCount > 1) {
-          const timeOnSiteStorage = localStorage.getItem("timeOnSite");
-          const timeOnSite = timeOnSiteStorage
-            ? parseInt(timeOnSiteStorage)
-            : 0;
-          sessionStorage.setItem(
-            "firstVisitTime",
-            (myDate - timeOnSite).toString()
-          );
-        } else {
-          sessionStorage.setItem("firstVisitTime", myDate.toString());
-        }
+        sessionStorage.setItem("firstVisitTime", myDate.toString());
       }
     }
     var myInterval = setInterval(function () {

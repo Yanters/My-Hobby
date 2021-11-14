@@ -76,7 +76,6 @@ const Navbar: React.FC<{ toggle: () => void }> = (props) => {
       $(".alert2").addClass("hide");
     });
 
-    console.log("done!@#");
     const LastVisitTimeStorage = localStorage.getItem("LastVisitTime");
     const LastVisitTime = LastVisitTimeStorage
       ? parseInt(LastVisitTimeStorage)
