@@ -1,15 +1,10 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 export const Container = styled.div`
-  height: 100vh;
-  width: 100vw;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 0;
-  overflow: hidden;
+  min-height: 100vh;
+  height: auto;
+  width: 100%;
+  overflow-y: auto;
   background: linear-gradient(
     108deg,
     rgba(1, 147, 86, 1) 0%,
@@ -18,51 +13,60 @@ export const Container = styled.div`
 `;
 
 export const FormWrap = styled.div`
-  height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  @media screen and (max-width: 400px) {
-    height: 80%;
-  }
+  overflow: auto;
+
+  /* @media screen and (max-width: 460px) {
+     height: 80%; 
+     align-items: center; 
+    width: 90%;
+  } */
 `;
 export const Icon = styled(Link)`
   margin-left: 32px;
   margin-top: 32px;
   text-decoration: none;
+  width: 90%;
   color: #fff;
   font-weight: 700;
   font-size: 32px;
   @media screen and (max-width: 480px) {
     margin-left: 16px;
     margin-top: 8px;
+    margin-bottom: 20px;
   }
 `;
 
 export const FormContent = styled.div`
-  height: 100%;
+  min-height: 90vh;
+  width: auto;
+  height: auto;
   display: flex;
-  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
   justify-content: center;
-  @media screen and (max-width: 480px) {
-    padding: 10px;
+  @media screen and (max-width: 768px) {
+    margin: 10px;
   }
 `;
 
 export const Form = styled.form`
   background: #010101;
-  max-width: 400px;
+  max-width: 40vh;
   height: auto;
   width: 100%;
   z-index: 1;
   display: grid;
   margin: 0 auto;
   padding: 80px 32px;
-  border-radius: 4px;
+  border-radius: 10px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
-  @media screen and (max-width: 400px) {
+  /* @media screen and (max-width: 400px) {
     padding: 32px 32px;
-  }
+  } */
 `;
 
 export const FormH1 = styled.h1`
@@ -80,7 +84,7 @@ export const FormLabel = styled.label`
 `;
 
 export const FormInput = styled.input`
-  padding: 16px 16px;
+  padding: 16px 0px;
   margin-bottom: 32px;
   border: none;
   border-radius: 4px;
