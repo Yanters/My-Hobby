@@ -41,7 +41,7 @@
   color: white;
 }
 .card__btn {
-  width: 94%;
+  width: 100%;
   padding: 1rem;
   font-family: inherit;
   font-weight: bold;
@@ -68,7 +68,17 @@
   text-decoration: none;
   color: unset;
   width: 100%;
+  display: block;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
+
+.button_wrapper {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  width: auto;
 }
 
 .model {

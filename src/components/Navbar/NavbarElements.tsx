@@ -80,10 +80,6 @@ export const SubMenu = styled.div`
   padding: 0 1rem;
   height: 96.5%;
   cursor: pointer;
-
-  &::hover {
-    display: block;
-  }
 `;
 
 export const NavLinks = styled(LinkScroll)`

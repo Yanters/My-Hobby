@@ -32,14 +32,16 @@ const Card = (props) => {
         <h2 className="card__title">{props.title}</h2>
         <p className="card__description">{props.description}</p>
       </div>
-      <a
-        className="button__link"
-        href={props.link}
-        target="_blank"
-        rel="noreferrer"
-      >
-        <button className="card__btn">View Source</button>
-      </a>
+      <div className="button__wrapper">
+        <a
+          className="button__link"
+          href={props.link}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button className="card__btn">View Source</button>
+        </a>
+      </div>
     </div>
   );
 };
