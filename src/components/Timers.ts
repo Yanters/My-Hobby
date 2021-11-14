@@ -28,19 +28,16 @@ export default function Timers() {
         : 0;
       var time = Date.now() - firstVisitTime;
       localStorage.setItem("timeOnSite", time.toString());
-      console.log(time / 1000 + " seconds have passed since first visit");
     }, 1000);
     return myInterval;
   }
 
   window.onbeforeunload = function () {
-    console.log("Document onbeforeunload state.");
     clearInterval(timer);
   };
   window.onunload = function () {
     var time = Date.now();
     localStorage.setItem("LastVisitTime", time.toString());
-    console.log("Document onunload state.");
   };
 
   var timer = myTimer();

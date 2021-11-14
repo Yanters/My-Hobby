@@ -16,9 +16,7 @@ import {
   NavBtnLink,
   SubMenu,
 } from "./NavbarElements";
-import jquery from "jquery";
-
-const $: JQueryStatic = jquery;
+import $ from "jquery";
 
 const Navbar: React.FC<{ toggle: () => void }> = (props) => {
   const [scrollNav, setScrollNav] = useState(false);
