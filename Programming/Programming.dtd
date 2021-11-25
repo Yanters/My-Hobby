@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!ELEMENT programming (intro,projects,skills)>
+
+<!ELEMENT intro (title,description)>
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT description (#PCDATA)>
+
+<!ELEMENT projects (project*)>
+<!ELEMENT project (mainProjectInformation,additionalInfo)>
+
+<!ATTLIST project status CDATA #REQUIRED>
+<!ATTLIST project freeCode (true|false) #REQUIRED>
+<!ATTLIST project id CDATA #REQUIRED>
+
+
+<!ELEMENT mainProjectInformation (title,projectImage,technologies,description,linkToProject)>
+
+<!ELEMENT projectImage (#PCDATA)>
+<!ATTLIST projectImage src CDATA #REQUIRED>
+<!ATTLIST projectImage roundedEdges (true|false) #REQUIRED>
+<!ATTLIST projectImage border (true|false) #REQUIRED>
+
+
+<!ELEMENT technologies (technology*)>
+<!ELEMENT technology (#PCDATA)>
+
+<!ELEMENT linkToProject (#PCDATA)>
+<!ATTLIST linkToProject src CDATA #REQUIRED>
+<!ATTLIST linkToProject openInNewTab (true|false) #REQUIRED>
+
+<!ELEMENT additionalInfo (authorInfo,timeInformation,filesSize,keywords)>
+
+<!ELEMENT authorInfo (authorName,authorSurname,authorGithub)>
+
+<!ELEMENT authorName (#PCDATA)>
+<!ELEMENT authorSurname (#PCDATA)>
+<!ELEMENT authorGithub (#PCDATA)>
+
+<!ATTLIST authorGithub src CDATA #REQUIRED>
+<!ATTLIST authorGithub openInNewTab (true|false) #REQUIRED>
+
+
+<!ELEMENT timeInformation (started,ended,totalTimeSpent)>
+<!ELEMENT started (#PCDATA)>
+<!ELEMENT ended (#PCDATA)>
+<!ELEMENT totalTimeSpent (#PCDATA)>
+
+<!ATTLIST totalTimeSpent roundBy CDATA #REQUIRED>
+<!ATTLIST totalTimeSpent dateType CDATA "h">
+
+
+<!ELEMENT filesSize (#PCDATA)>
+
+<!ELEMENT keywords (#PCDATA)>
+
+
+<!ELEMENT skills (item*)>
+
+<!ELEMENT item (title,skillsDates,totalTimeSpent)>
+
+<!ELEMENT skillsDates (started|starting)>
+<!ELEMENT starting (#PCDATA)>
+
+

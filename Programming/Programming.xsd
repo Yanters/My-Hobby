@@ -1,0 +1,254 @@
+﻿<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="qualified">
+
+
+  <xs:element name="programming" >
+    <xs:complexType >
+      <xs:sequence>
+        <xs:element name="intro" type="introType"/>
+        <xs:element name="projects" type="projectsType"  maxOccurs="1" />
+        <xs:element name="skills" type="skillsType"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="title">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:maxLength value="35"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+
+  <xs:simpleType name="descriptionType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="50"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="introType">
+    <xs:sequence>
+      <xs:element ref="title" maxOccurs="1"/>
+      <xs:element name="description" type="descriptionType" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="projectsType">
+    <xs:sequence>
+      <xs:element name="project" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:all>
+            <xs:element name="mainProjectInformation" type="mainProjectInformationType" maxOccurs="1"/>
+            <xs:element name="additionalInfo" type="additionalInfoType" minOccurs="0" maxOccurs="1"/>
+          </xs:all>
+          <xs:attribute ref="id" />
+          <xs:attribute name="status"  >
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:enumeration value="completed" />
+                <xs:enumeration value="work-in-progres" />
+                <xs:enumeration value="abandoned" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="freeCode">
+            <xs:simpleType>
+              <xs:restriction base="xs:string">
+                <xs:pattern value="true|false" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:attribute name="id" type="xs:byte" />
+
+
+  <xs:complexType name="mainProjectInformationType">
+    <xs:sequence>
+      <xs:element ref="title" maxOccurs="1"/>
+      <xs:element name="projectImage" type="projectImageType" maxOccurs="1"/>
+      <xs:element name="technologies" type="technologiesType" maxOccurs="1"/>
+      <xs:element name="description" type="descriptionType" maxOccurs="1"/>
+      <xs:element name="linkToProject" type="linkType" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="technologiesType">
+    <xs:sequence>
+      <xs:element name="technology" type="xs:string"  maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="linkType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="src" use="required"/>
+        <xs:attribute name="openInNewTab" type="trueFalseOption" use="required"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+
+  <xs:complexType name="projectImageType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute ref="src" use="required"/>
+        <xs:attribute name="roundedEdges" type="trueFalseOption" use="required"/>
+        <xs:attribute name="border" type="trueFalseOption" use="optional"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:attribute name="src" type="xs:anyURI" />
+
+
+  <xs:simpleType name="trueFalseOption">
+    <xs:restriction base="xs:boolean">
+      <xs:pattern value="true|false"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="shortStringType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:complexType name="additionalInfoType">
+    <xs:sequence>
+      <xs:element name="authorInfo" type="authorInfoType" maxOccurs="1"/>
+      <xs:element name="timeInformation" type="timeInformationType" maxOccurs="1"/>
+      <xs:element name="filesSize">
+        <xs:simpleType>
+          <xs:restriction base='fileSizeTypes'>
+            <xs:length value='2'/>
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
+      <xs:element name="keywords" type="editedListType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="fileSizeTypes">
+    <xs:list>
+      <xs:simpleType >
+        <xs:union>
+          <xs:simpleType>
+            <xs:restriction base="xs:integer">
+              <xs:minExclusive value="0" />
+              <xs:maxExclusive value="1000" />
+            </xs:restriction>
+          </xs:simpleType>
+          <xs:simpleType>
+            <xs:restriction base="xs:token">
+              <xs:enumeration value="KB" />
+              <xs:enumeration value="MB" />
+              <xs:enumeration value="GB" />
+              <xs:enumeration value="TB" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:union>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+
+  
+
+
+  <xs:simpleType name='editedListType'>
+    <xs:restriction base='keywordsListType'>
+      <xs:minLength value='2'/>
+      <xs:maxLength value='5'/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="keywordsListType">
+    <xs:list itemType="listOver"/>
+  </xs:simpleType>
+
+  <xs:simpleType name="listOver">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HTML"/>
+      <xs:enumeration value="CSS"/>
+      <xs:enumeration value="JS"/>
+      <xs:enumeration value="Node.JS"/>
+      <xs:enumeration value="React.JS"/>
+      <xs:enumeration value="PHP"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="timeInformationType">
+    <xs:sequence>
+      <xs:element name="started" type="dateType"  maxOccurs="1"/>
+      <xs:element name="ended" type="dateType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="totalTimeSpent" type="totalTimeSpentType" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="authorInfoType">
+    <xs:sequence>
+      <xs:element name="authorName" type="shortStringType"  maxOccurs="1"/>
+      <xs:element name="authorSurname" type="shortStringType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="authorGithub" type="linkType" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:group name="itemElementGroup">
+    <xs:sequence>
+      <xs:element ref="title"/>
+      <xs:element name="skillsDates">
+        <xs:complexType>
+          <xs:choice>
+            <xs:element name="started" type="xs:string"/>
+            <xs:element name="starting" type="xs:string"/>
+          </xs:choice>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="totalTimeSpent" type="totalTimeSpentType"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="totalTimeSpentType">
+    <xs:simpleContent>
+      <xs:extension base="xs:int">
+        <xs:attribute name="roundBy" use="required">
+          <xs:simpleType>
+            <xs:restriction base="xs:int">
+              <xs:pattern value="1|10|20|50|100"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+        <xs:attribute name="dateType" use="optional">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:pattern value="h|d|w|m|y"/>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+
+  <xs:simpleType name="dateType">
+    <xs:restriction base="xs:date">
+      <xs:minInclusive value="2000-01-01"/>
+      <xs:maxInclusive value="2022-12-31"/>
+      <xs:pattern value=".{10}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="skillsType">
+    <xs:sequence>
+      <xs:element name="item" type="itemElement" maxOccurs="unbounded"/>
+      </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="itemElement">
+    <xs:group ref="itemElementGroup"/>
+  </xs:complexType>
+
+</xs:schema>

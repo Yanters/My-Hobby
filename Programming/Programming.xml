@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<!--<!DOCTYPE programming SYSTEM "Programming.dtd">-->
+
+<programming xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Programming.xsd">
+  <intro>
+    <title>What is Programming </title>
+    <description>Computer programming is the process of designing and building an executable computer program to accomplish a specific computing result or to perform a specific task.</description>
+  </intro>
+  <projects>
+    <project status="completed" freeCode="true" id="1">
+      <mainProjectInformation>
+        <title>My Hobby</title>
+        <projectImage src="https://www.google.com/" roundedEdges="true" border="true">IMG</projectImage>
+        <technologies>
+          <technology>React</technology>
+          <technology>Node.JS</technology>
+        </technologies>
+        <description>some text about the projectdsadsadsadsasadsdasdadasdsasdas</description>
+        <linkToProject src="https://www.github.com/Yanters/My-Hobby"  openInNewTab="true" >My-Hobby</linkToProject>
+      </mainProjectInformation>
+      <additionalInfo>
+        <authorInfo>
+          <authorName>Yanter</authorName>
+          <authorSurname>XXX</authorSurname>
+          <authorGithub src="https://www.github.com/Yanters" openInNewTab="true">Yanters</authorGithub>
+        </authorInfo>
+        <timeInformation>
+          <started>2020-12-01</started>
+          <ended>2021-12-01</ended>
+          <totalTimeSpent roundBy="10" dateType="h">200</totalTimeSpent>
+        </timeInformation>
+        <filesSize>100 MB</filesSize>
+        <keywords>React.JS Node.JS HTML CSS</keywords>
+      </additionalInfo>
+    </project>
+    <project status="completed" freeCode="true" id="1">
+      <mainProjectInformation>
+        <title>My Hobby</title>
+        <projectImage src="https://www.google.com/" roundedEdges="true" border="true">IMG</projectImage>
+        <technologies>
+          <technology>React</technology>
+          <technology>Node.JS</technology>
+        </technologies>
+        <description>some text about the projectdsadsadsadsasadsdasdadasdsasdas</description>
+        <linkToProject src="https://www.github.com/Yanters/My-Hobby"  openInNewTab="true" >My-Hobby</linkToProject>
+      </mainProjectInformation>
+      <additionalInfo>
+        <authorInfo>
+          <authorName>Yanter</authorName>
+          <authorSurname>XXX</authorSurname>
+          <authorGithub src="https://www.github.com/Yanters" openInNewTab="true">Yanters</authorGithub>
+        </authorInfo>
+        <timeInformation>
+          <started>2020-12-01</started>
+          <ended>2021-12-01</ended>
+          <totalTimeSpent roundBy="10" dateType="h">200</totalTimeSpent>
+        </timeInformation>
+        <filesSize>100 MB</filesSize>
+        <keywords>React.JS Node.JS HTML CSS</keywords>
+      </additionalInfo>
+    </project>
+    <project status="completed" freeCode="true" id="1">
+      <mainProjectInformation>
+        <title>My Hobby</title>
+        <projectImage src="https://www.google.com/" roundedEdges="true" border="true">IMG</projectImage>
+        <technologies>
+          <technology>React</technology>
+          <technology>Node.JS</technology>
+        </technologies>
+        <description>some text about the projectdsadsadsadsasadsdasdadasdsasdas</description>
+        <linkToProject src="https://www.github.com/Yanters/My-Hobby"  openInNewTab="true" >My-Hobby</linkToProject>
+      </mainProjectInformation>
+      <additionalInfo>
+        <authorInfo>
+          <authorName>Yanter</authorName>
+          <authorSurname>XXX</authorSurname>
+          <authorGithub src="https://www.github.com/Yanters" openInNewTab="true">Yanters</authorGithub>
+        </authorInfo>
+        <timeInformation>
+          <started>2020-12-01</started>
+          <ended>2021-12-01</ended>
+          <totalTimeSpent roundBy="10" dateType="h">200</totalTimeSpent>
+        </timeInformation>
+        <filesSize>100 MB</filesSize>
+        <keywords>React.JS Node.JS HTML CSS</keywords>
+      </additionalInfo>
+    </project>
+  </projects>
+
+  <skills>
+    <item>
+      <title>React.JS</title>
+      <skillsDates>
+        <started>2020-12-01</started>
+      </skillsDates>
+      <totalTimeSpent roundBy="10" dateType="h">500</totalTimeSpent>
+    </item>
+    <item>
+      <title>HTML/CSS/JS</title>
+      <skillsDates>
+        <starting>2020-12-01</starting>
+      </skillsDates>
+      <totalTimeSpent roundBy="20" dateType="w">1230</totalTimeSpent>
+    </item>
+    <item>
+      <title>Node.JS</title>
+      <skillsDates>
+        <started>2020-12-01</started>
+      </skillsDates>
+      <totalTimeSpent roundBy="1" dateType="d">235</totalTimeSpent>
+    </item>
+  </skills>
+
+</programming>
