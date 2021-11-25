@@ -41,7 +41,7 @@
   height: 80%;
 }
 
-.form-img-2 {
+#form-img-2 {
   width: 80%;
   height: 80%;
 }
@@ -219,7 +219,7 @@ input[type="submit"]:hover {
     height: 100%;
     width: 100%;
   }
-  .form-img-2 {
+  #form-img-2 {
     padding: 40px 10px;
   }
   .form-success {
