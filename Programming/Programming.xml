@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
-<!--<!DOCTYPE programming SYSTEM "Programming.dtd">-->
+<!DOCTYPE programming SYSTEM "Programming.dtd">
 
 <programming xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="Programming.xsd">
   <intro>
@@ -34,7 +34,7 @@
         <keywords>React.JS Node.JS HTML CSS</keywords>
       </additionalInfo>
     </project>
-    <project status="completed" freeCode="true" id="1">
+    <project status="completed" freeCode="true" id="2">
       <mainProjectInformation>
         <title>My Hobby</title>
         <projectImage src="https://www.google.com/" roundedEdges="true" border="true">IMG</projectImage>
@@ -60,7 +60,7 @@
         <keywords>React.JS Node.JS HTML CSS</keywords>
       </additionalInfo>
     </project>
-    <project status="completed" freeCode="true" id="1">
+    <project status="completed" freeCode="true" id="3">
       <mainProjectInformation>
         <title>My Hobby</title>
         <projectImage src="https://www.google.com/" roundedEdges="true" border="true">IMG</projectImage>

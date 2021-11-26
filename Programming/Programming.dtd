@@ -1,13 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 
+<!ENTITY % src " src CDATA #REQUIRED">
+<!ENTITY % openInNewTab " openInNewTab (true|false) #REQUIRED">
+<!ENTITY % started " started (#PCDATA)">
+<!ENTITY % ended " ended (#PCDATA)">
+<!ENTITY % totalTimeSpent " totalTimeSpent (#PCDATA)">
+
+
 <!ELEMENT programming (intro,projects,skills)>
+<!ATTLIST programming xmlns:xsi CDATA #REQUIRED>
+<!ATTLIST programming xsi:noNamespaceSchemaLocation CDATA #REQUIRED>
 
 <!ELEMENT intro (title,description)>
 <!ELEMENT title (#PCDATA)>
 <!ELEMENT description (#PCDATA)>
 
 <!ELEMENT projects (project*)>
-<!ELEMENT project (mainProjectInformation,additionalInfo)>
+<!ELEMENT project (mainProjectInformation,additionalInfo?)>
 
 <!ATTLIST project status CDATA #REQUIRED>
 <!ATTLIST project freeCode (true|false) #REQUIRED>
@@ -17,7 +26,7 @@
 <!ELEMENT mainProjectInformation (title,projectImage,technologies,description,linkToProject)>
 
 <!ELEMENT projectImage (#PCDATA)>
-<!ATTLIST projectImage src CDATA #REQUIRED>
+<!ATTLIST projectImage %src;>
 <!ATTLIST projectImage roundedEdges (true|false) #REQUIRED>
 <!ATTLIST projectImage border (true|false) #REQUIRED>
 
@@ -26,8 +35,8 @@
 <!ELEMENT technology (#PCDATA)>
 
 <!ELEMENT linkToProject (#PCDATA)>
-<!ATTLIST linkToProject src CDATA #REQUIRED>
-<!ATTLIST linkToProject openInNewTab (true|false) #REQUIRED>
+<!ATTLIST linkToProject %src;>
+<!ATTLIST linkToProject %openInNewTab;>
 
 <!ELEMENT additionalInfo (authorInfo,timeInformation,filesSize,keywords)>
 
@@ -37,23 +46,20 @@
 <!ELEMENT authorSurname (#PCDATA)>
 <!ELEMENT authorGithub (#PCDATA)>
 
-<!ATTLIST authorGithub src CDATA #REQUIRED>
-<!ATTLIST authorGithub openInNewTab (true|false) #REQUIRED>
-
+<!ATTLIST authorGithub %src;>
+<!ATTLIST authorGithub %openInNewTab;>
 
 <!ELEMENT timeInformation (started,ended,totalTimeSpent)>
-<!ELEMENT started (#PCDATA)>
-<!ELEMENT ended (#PCDATA)>
-<!ELEMENT totalTimeSpent (#PCDATA)>
+<!ELEMENT %started;>
+<!ELEMENT %ended;>
+<!ELEMENT %totalTimeSpent;>
 
 <!ATTLIST totalTimeSpent roundBy CDATA #REQUIRED>
 <!ATTLIST totalTimeSpent dateType CDATA "h">
 
-
 <!ELEMENT filesSize (#PCDATA)>
 
 <!ELEMENT keywords (#PCDATA)>
-
 
 <!ELEMENT skills (item*)>
 
@@ -61,5 +67,3 @@
 
 <!ELEMENT skillsDates (started|starting)>
 <!ELEMENT starting (#PCDATA)>
-
-
