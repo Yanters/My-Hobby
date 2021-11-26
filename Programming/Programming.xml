@@ -11,79 +11,107 @@
     <project status="completed" freeCode="true" id="1">
       <mainProjectInformation>
         <title>My Hobby</title>
-        <projectImage src="https://www.google.com/" roundedEdges="true" border="true">IMG</projectImage>
+        <projectImage src="http://prntscr.com/20xg3xt" roundedEdges="true" border="true">My-Hobby</projectImage>
         <technologies>
-          <technology>React</technology>
-          <technology>Node.JS</technology>
+          <technology>React.JS</technology>
+          <technology>Jquery</technology>
+          <technology>HTML/CSS/JS</technology>
         </technologies>
-        <description>some text about the projectdsadsadsadsasadsdasdadasdsasdas</description>
+        <description>My Hobby is site about what I like doing in my free time. It shows what programming is and displays some of my projects.</description>
         <linkToProject src="https://www.github.com/Yanters/My-Hobby"  openInNewTab="true" >My-Hobby</linkToProject>
       </mainProjectInformation>
       <additionalInfo>
         <authorInfo>
-          <authorName>Yanter</authorName>
-          <authorSurname>XXX</authorSurname>
-          <authorGithub src="https://www.github.com/Yanters" openInNewTab="true">Yanters</authorGithub>
+          <authorName>Konrad</authorName>
+          <authorSurname>Nowicki</authorSurname>
+          <authorGithub src="https://www.github.com/Yanters" openInNewTab="true">Konrad Nowicki</authorGithub>
         </authorInfo>
         <timeInformation>
-          <started>2020-12-01</started>
-          <ended>2021-12-01</ended>
-          <totalTimeSpent roundBy="10" dateType="h">200</totalTimeSpent>
+          <started>2021-11-04</started>
+          <ended>2021-11-26</ended>
+          <totalTimeSpent roundBy="10" dateType="h">130</totalTimeSpent>
         </timeInformation>
-        <filesSize>100 MB</filesSize>
-        <keywords>React.JS Node.JS HTML CSS</keywords>
+        <filesSize>800 MB</filesSize>
+        <keywords>React.JS HTML CSS JS</keywords>
       </additionalInfo>
     </project>
-    <project status="completed" freeCode="true" id="2">
+    <project status="completed" freeCode="false" id="2">
       <mainProjectInformation>
-        <title>My Hobby</title>
-        <projectImage src="https://www.google.com/" roundedEdges="true" border="true">IMG</projectImage>
+        <title>Yelp Camp</title>
+        <projectImage src="https://res.cloudinary.com/practicaldev/image/fetch/s--NBm9iECO--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://dev-to-uploads.s3.amazonaws.com/i/zxl0jexucunpmlw9qtuq.png" roundedEdges="false" border="false">YelpCamp</projectImage>
         <technologies>
-          <technology>React</technology>
           <technology>Node.JS</technology>
+          <technology>MongoDB</technology>
+          <technology>HTML/CSS/Js</technology>
         </technologies>
-        <description>some text about the projectdsadsadsadsasadsdasdadasdsasdas</description>
-        <linkToProject src="https://www.github.com/Yanters/My-Hobby"  openInNewTab="true" >My-Hobby</linkToProject>
+        <description>This site is about camping. You can login or create a new account to post your campground. You can add comments and review it.</description>
+        <linkToProject src="https://www.github.com/Yanters/YelpCamp"  openInNewTab="true" >YelpCamp</linkToProject>
       </mainProjectInformation>
       <additionalInfo>
         <authorInfo>
-          <authorName>Yanter</authorName>
-          <authorSurname>XXX</authorSurname>
-          <authorGithub src="https://www.github.com/Yanters" openInNewTab="true">Yanters</authorGithub>
+          <authorName>Konrad</authorName>
+          <authorSurname>Nowicki</authorSurname>
+          <authorGithub src="https://www.github.com/Yanters" openInNewTab="true">Konrad Nowicki</authorGithub>
         </authorInfo>
         <timeInformation>
-          <started>2020-12-01</started>
-          <ended>2021-12-01</ended>
-          <totalTimeSpent roundBy="10" dateType="h">200</totalTimeSpent>
+          <started>2020-10-13</started>
+          <ended>2021-11-16</ended>
+          <totalTimeSpent roundBy="20" dateType="h">180</totalTimeSpent>
         </timeInformation>
-        <filesSize>100 MB</filesSize>
-        <keywords>React.JS Node.JS HTML CSS</keywords>
+        <filesSize>1 GB</filesSize>
+        <keywords>Node.JS HTML CSS JS</keywords>
       </additionalInfo>
     </project>
     <project status="completed" freeCode="true" id="3">
       <mainProjectInformation>
-        <title>My Hobby</title>
-        <projectImage src="https://www.google.com/" roundedEdges="true" border="true">IMG</projectImage>
+        <title>Parallax Scrolling</title>
+        <projectImage src="http://prntscr.com/20xg6lq" roundedEdges="true" border="true">Parallax Scrolling</projectImage>
         <technologies>
-          <technology>React</technology>
-          <technology>Node.JS</technology>
+          <technology>HTML/CSS/JS</technology>
         </technologies>
-        <description>some text about the projectdsadsadsadsasadsdasdadasdsasdas</description>
-        <linkToProject src="https://www.github.com/Yanters/My-Hobby"  openInNewTab="true" >My-Hobby</linkToProject>
+        <description>Site in witch is displayed how paralax scrolling works. It is very simple and good looking site.</description>
+        <linkToProject src="https://www.github.com/Yanters/Parallax-Scrolling"  openInNewTab="true" >Parallax Scrolling</linkToProject>
       </mainProjectInformation>
       <additionalInfo>
         <authorInfo>
-          <authorName>Yanter</authorName>
-          <authorSurname>XXX</authorSurname>
-          <authorGithub src="https://www.github.com/Yanters" openInNewTab="true">Yanters</authorGithub>
+          <authorName>Konrad</authorName>
+          <authorSurname>Nowicki</authorSurname>
+          <authorGithub src="https://www.github.com/Yanters" openInNewTab="true">Konrad Nowicki</authorGithub>
         </authorInfo>
         <timeInformation>
-          <started>2020-12-01</started>
-          <ended>2021-12-01</ended>
-          <totalTimeSpent roundBy="10" dateType="h">200</totalTimeSpent>
+          <started>2021-06-25</started>
+          <ended>2021-06-25</ended>
+          <totalTimeSpent roundBy="1" dateType="h">3</totalTimeSpent>
         </timeInformation>
-        <filesSize>100 MB</filesSize>
-        <keywords>React.JS Node.JS HTML CSS</keywords>
+        <filesSize>50 MB</filesSize>
+        <keywords>HTML CSS JS</keywords>
+      </additionalInfo>
+    </project>
+    <project status="completed" freeCode="true" id="4">
+      <mainProjectInformation>
+        <title>Messenger App</title>
+        <projectImage src="http://prntscr.com/20xg7x9" roundedEdges="true" border="true">Messenger App</projectImage>
+        <technologies>
+          <technology>React</technology>
+          <technology>Firebase</technology>
+          <technology>MessengerEngine</technology>
+        </technologies>
+        <description>Messenger app is a website in witch you can login using your facebook account or google account and chat with others.</description>
+        <linkToProject src="https://www.github.com/Yanters/Messenger-App"  openInNewTab="true" >Messenger App</linkToProject>
+      </mainProjectInformation>
+      <additionalInfo>
+        <authorInfo>
+          <authorName>Konrad</authorName>
+          <authorSurname>Nowicki</authorSurname>
+          <authorGithub src="https://www.github.com/Yanters" openInNewTab="true">Konrad Nowicki</authorGithub>
+        </authorInfo>
+        <timeInformation>
+          <started>2021-08-17</started>
+          <ended>2021-08-22</ended>
+          <totalTimeSpent roundBy="10" dateType="h">10</totalTimeSpent>
+        </timeInformation>
+        <filesSize>400 MB</filesSize>
+        <keywords>React.JS HTML CSS JS</keywords>
       </additionalInfo>
     </project>
   </projects>
@@ -92,23 +120,30 @@
     <item>
       <title>React.JS</title>
       <skillsDates>
-        <started>2020-12-01</started>
+        <started>2021-07-04</started>
       </skillsDates>
-      <totalTimeSpent roundBy="10" dateType="h">500</totalTimeSpent>
+      <totalTimeSpent roundBy="20" dateType="h">700</totalTimeSpent>
     </item>
     <item>
       <title>HTML/CSS/JS</title>
       <skillsDates>
-        <starting>2020-12-01</starting>
+        <started>2021-05-22</started>
       </skillsDates>
-      <totalTimeSpent roundBy="20" dateType="w">1230</totalTimeSpent>
+      <totalTimeSpent roundBy="1" dateType="w">20</totalTimeSpent>
     </item>
     <item>
       <title>Node.JS</title>
       <skillsDates>
-        <started>2020-12-01</started>
+        <started>2021-06-12</started>
       </skillsDates>
-      <totalTimeSpent roundBy="1" dateType="d">235</totalTimeSpent>
+      <totalTimeSpent roundBy="10" dateType="d">70</totalTimeSpent>
+    </item>
+    <item>
+      <title>Vue.js</title>
+      <skillsDates>
+        <starting>2022-01-01</starting>
+      </skillsDates>
+      <totalTimeSpent roundBy="1" dateType="h">1</totalTimeSpent>
     </item>
   </skills>
 

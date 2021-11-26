@@ -116,7 +116,7 @@
       <xs:maxLength value="30"/>
     </xs:restriction>
   </xs:simpleType>
-  
+
   <xs:complexType name="additionalInfoType">
     <xs:sequence>
       <xs:element name="authorInfo" type="authorInfoType" maxOccurs="1"/>
@@ -155,7 +155,7 @@
     </xs:list>
   </xs:simpleType>
 
-  
+
 
 
   <xs:simpleType name='editedListType'>
@@ -244,7 +244,7 @@
   <xs:complexType name="skillsType">
     <xs:sequence>
       <xs:element name="item" type="itemElement" maxOccurs="unbounded"/>
-      </xs:sequence>
+    </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="itemElement">

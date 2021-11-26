@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="programming">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="intro" />
+        <xs:element ref="projects" />
+        <xs:element ref="skills" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="intro">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="title" />
+        <xs:element ref="description" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="title" type="xs:string" />
+  <xs:element name="description" type="xs:string" />
+  <xs:element name="projects">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="project" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="project">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="mainProjectInformation" />
+        <xs:element minOccurs="0" maxOccurs="1" ref="additionalInfo" />
+      </xs:sequence>
+      <xs:attribute name="status" type="xs:string" use="required" />
+      <xs:attribute name="freeCode" use="required">
+        <xs:simpleType>
+          <xs:restriction base="xs:NMTOKEN">
+            <xs:enumeration value="true" />
+            <xs:enumeration value="false" />
+          </xs:restriction>
+        </xs:simpleType>
+      </xs:attribute>
+      <xs:attribute name="id" type="xs:string" use="required" />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="mainProjectInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="title" />
+        <xs:element ref="projectImage" />
+        <xs:element ref="technologies" />
+        <xs:element ref="description" />
+        <xs:element ref="linkToProject" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="projectImage">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="src" type="xs:string" use="required" />
+          <xs:attribute name="roundedEdges" use="required">
+            <xs:simpleType>
+              <xs:restriction base="xs:NMTOKEN">
+                <xs:enumeration value="true" />
+                <xs:enumeration value="false" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+          <xs:attribute name="border" use="required">
+            <xs:simpleType>
+              <xs:restriction base="xs:NMTOKEN">
+                <xs:enumeration value="true" />
+                <xs:enumeration value="false" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="technologies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="technology" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="technology" type="xs:string" />
+  <xs:element name="linkToProject">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="src" type="xs:string" use="required" />
+          <xs:attribute name="openInNewTab" use="required">
+            <xs:simpleType>
+              <xs:restriction base="xs:NMTOKEN">
+                <xs:enumeration value="true" />
+                <xs:enumeration value="false" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="additionalInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="authorInfo" />
+        <xs:element ref="timeInformation" />
+        <xs:element ref="filesSize" />
+        <xs:element ref="keywords" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="authorInfo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="authorName" />
+        <xs:element ref="authorSurname" />
+        <xs:element ref="authorGithub" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="authorName" type="xs:string" />
+  <xs:element name="authorSurname" type="xs:string" />
+  <xs:element name="authorGithub">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="src" type="xs:string" use="required" />
+          <xs:attribute name="openInNewTab" use="required">
+            <xs:simpleType>
+              <xs:restriction base="xs:NMTOKEN">
+                <xs:enumeration value="true" />
+                <xs:enumeration value="false" />
+              </xs:restriction>
+            </xs:simpleType>
+          </xs:attribute>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="timeInformation">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="started" />
+        <xs:element ref="ended" />
+        <xs:element ref="totalTimeSpent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="started" type="xs:string" />
+  <xs:element name="ended" type="xs:string" />
+  <xs:element name="totalTimeSpent">
+    <xs:complexType>
+      <xs:simpleContent>
+        <xs:extension base="xs:string">
+          <xs:attribute name="roundBy" type="xs:string" use="required" />
+          <xs:attribute default="h" name="dateType" type="xs:string" />
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="filesSize" type="xs:string" />
+  <xs:element name="keywords" type="xs:string" />
+  <xs:element name="skills">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" maxOccurs="unbounded" ref="item" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="item">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="title" />
+        <xs:element ref="skillsDates" />
+        <xs:element ref="totalTimeSpent" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="skillsDates">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element ref="started" />
+        <xs:element ref="starting" />
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="starting" type="xs:string" />
+</xs:schema>
