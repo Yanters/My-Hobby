@@ -67,3 +67,6 @@
 
 <!ELEMENT skillsDates (started|starting)>
 <!ELEMENT starting (#PCDATA)>
+
+<!ENTITY K "Konrad">
+<!ENTITY N "Nowicki">
